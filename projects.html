@@ -279,7 +279,7 @@
                 </a>
               </h2>
               <p class="project-desc">
-                Regulation-aware F1 podium prediction engine combining a temporally-weighted Random Forest (×100 2026 weight) with an autonomous Google News RSS & Gemini extraction agent. Automatically tracks technical upgrades across all 11 teams, cross-checks claims against live FastF1 practice telemetry, and evaluates dynamic pace deltas.
+                Real-time F1 race simulation and win/podium prediction dashboard. Combines a regularized Random Forest (v6 feature engine with session-aware adaptation) with an autonomous Google News RSS & Gemini agent that extracts dynamic aerodynamic pace deltas and failure awareness (porpoising, wing reversions) across all 11 teams.
               </p>
               <div class="project-metrics-row">
                 <div class="p-metric">
@@ -287,17 +287,17 @@
                   <span class="p-metric-lbl">Podium Accuracy (+4.8% Alpha)</span>
                 </div>
                 <div class="p-metric">
-                  <span class="p-metric-val">Gemini + RSS</span>
-                  <span class="p-metric-lbl">Live Upgrade Agent</span>
+                  <span class="p-metric-val">0.0812</span>
+                  <span class="p-metric-lbl">Calibrated Brier Score</span>
                 </div>
               </div>
             </div>
             <div class="project-footer">
               <div class="project-tech-pills">
                 <span>Python</span>
+                <span>Random Forest</span>
                 <span>Gemini API</span>
-                <span>FastF1</span>
-                <span>Scikit-Learn</span>
+                <span>Google News RSS</span>
                 <span>React 19</span>
                 <span>Flask</span>
               </div>
@@ -323,8 +323,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">01</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">FASTF1 INGEST</span>
-                      <span class="arch-node-sub">FP1–FP3 Multi-Session Telemetry</span>
+                      <span class="arch-node-title">MULTI-SESSION INGEST</span>
+                      <span class="arch-node-sub">2023–2026 Data · Practice, Sprint & Quali Pace</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -336,7 +336,7 @@
                     <span class="arch-node-step">02</span>
                     <div class="arch-node-content">
                       <span class="arch-node-title">GEMINI RSS AGENT</span>
-                      <span class="arch-node-sub">Live Upgrade & Aerodynamic Defect Scorer</span>
+                      <span class="arch-node-sub">3-Wk Rolling Window · Dynamic Deltas & Failure Scorer</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -347,8 +347,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">03</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">TEMPORAL WEIGHTS</span>
-                      <span class="arch-node-sub">×100 2026 Era Form Calibrator</span>
+                      <span class="arch-node-title">v6 FEATURE ENGINE</span>
+                      <span class="arch-node-sub">Session Adaptation · Overtake Index · ×100 Era Weight</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -360,7 +360,7 @@
                     <span class="arch-node-step">04</span>
                     <div class="arch-node-content">
                       <span class="arch-node-title">RANDOM FOREST</span>
-                      <span class="arch-node-sub">Calibrated Podium Probabilities</span>
+                      <span class="arch-node-sub">Win (P1), Top-2, and Podium Probabilities</span>
                     </div>
                   </div>
                 </div>
