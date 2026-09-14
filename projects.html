@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Chivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/main.css?v=20260904">
+  <link rel="stylesheet" href="css/main.css?v=20260914">
 </head>
 <body class="telemetry-theme">
   <!-- Custom Kinetic Cursor -->
@@ -122,32 +122,51 @@
                   <span>PIPELINE // SELF-CALIBRATING AGENT</span>
                   <span class="arch-pipeline-badge">LOCAL 8B INFERENCE</span>
                 </div>
-                <svg class="arch-diagram-svg" viewBox="0 0 520 70" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Culler Architecture Diagram">
-                  <rect x="5" y="15" width="105" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="57" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">STREAM TELEMETRY</text>
-                  <text x="57" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Exportify & Last.fm</text>
-
-                  <path d="M110 35 H132" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="132,32 137,35 132,38" fill="#5E212A"/>
-
-                  <rect x="137" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="194" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">SQLITE RULE STORE</text>
-                  <text x="194" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Audit Track History</text>
-
-                  <path d="M252 35 H274" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="274,32 279,35 274,38" fill="#5E212A"/>
-
-                  <rect x="279" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="336" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">QWEN3 8B (CoT)</text>
-                  <text x="336" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Chain-of-Thought</text>
-
-                  <path d="M394 35 H416" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="416,32 421,35 416,38" fill="#5E212A"/>
-
-                  <rect x="421" y="15" width="94" height="40" fill="#18191E" stroke="#10B981" stroke-width="1"/>
-                  <text x="468" y="33" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">CALIBRATION</text>
-                  <text x="468" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Cluster Feedback</text>
-                </svg>
+                <div class="arch-pipeline-flow">
+                  <div class="arch-node">
+                    <span class="arch-node-step">01</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">STREAM TELEMETRY</span>
+                      <span class="arch-node-sub">Exportify & Last.fm Ingestion</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">02</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">SQLITE RULE STORE</span>
+                      <span class="arch-node-sub">Audit Track History & Constraints</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">03</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">QWEN3 8B (CoT)</span>
+                      <span class="arch-node-sub">Chain-of-Thought Skip Reasoning</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node arch-node-terminal">
+                    <span class="arch-node-step">04</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">CALIBRATION</span>
+                      <span class="arch-node-sub">Error Cluster Feedback Loop</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -199,32 +218,51 @@
                   <span>PIPELINE // MULTI-NODE LANGGRAPH</span>
                   <span class="arch-pipeline-badge">CACHED INGESTION</span>
                 </div>
-                <svg class="arch-diagram-svg" viewBox="0 0 520 70" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WFM Advisor Architecture Diagram">
-                  <rect x="5" y="15" width="105" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="57" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">MARKET API</text>
-                  <text x="57" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Live In-Game Data</text>
-
-                  <path d="M110 35 H132" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="132,32 137,35 132,38" fill="#5E212A"/>
-
-                  <rect x="137" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="194" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">SQLITE CACHE</text>
-                  <text x="194" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Conditional Tracking</text>
-
-                  <path d="M252 35 H274" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="274,32 279,35 274,38" fill="#5E212A"/>
-
-                  <rect x="279" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="336" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">LANGGRAPH</text>
-                  <text x="336" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Trend·Vault·Patch</text>
-
-                  <path d="M394 35 H416" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="416,32 421,35 416,38" fill="#5E212A"/>
-
-                  <rect x="421" y="15" width="94" height="40" fill="#18191E" stroke="#10B981" stroke-width="1"/>
-                  <text x="468" y="33" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">SYNTHESIS</text>
-                  <text x="468" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">SELL / HOLD Signal</text>
-                </svg>
+                <div class="arch-pipeline-flow">
+                  <div class="arch-node">
+                    <span class="arch-node-step">01</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">MARKET API</span>
+                      <span class="arch-node-sub">Live In-Game Market Data</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">02</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">SQLITE CACHE</span>
+                      <span class="arch-node-sub">Zero-Redundancy Conditional Ingestion</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">03</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">LANGGRAPH PIPELINE</span>
+                      <span class="arch-node-sub">Trend · Vault · Patch State Nodes</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node arch-node-terminal">
+                    <span class="arch-node-step">04</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">SYNTHESIS</span>
+                      <span class="arch-node-sub">Deterministic SELL / HOLD Signal</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -232,40 +270,44 @@
           <!-- Project 03: Paddock Scout -->
           <article class="project-card" data-category="telemetry ai">
             <div class="project-card-header">
-              <div class="project-num-tag">TELEMETRY & ML</div>
+              <div class="project-num-tag">AGENTIC AI & TELEMETRY</div>
             </div>
             <div class="project-body">
               <h2 class="project-title">
-                <a href="https://github.com/mnarla/Paddock-Scout" target="_blank" rel="noopener noreferrer" class="project-link">
+                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
                   Paddock Scout <span class="card-arrow">↗</span>
                 </a>
               </h2>
               <p class="project-desc">
-                Regulation-aware F1 race prediction engine using temporally-weighted Random Forests and real-time telemetry ingestion. Built with an autonomous news intelligence agent that scans technical upgrades via DuckDuckGo without external API costs to dynamically adjust model weights.
+                Regulation-aware F1 podium prediction engine combining a temporally-weighted Random Forest (×100 2026 weight) with an autonomous Google News RSS & Gemini extraction agent. Automatically tracks technical upgrades across all 11 teams, cross-checks claims against live FastF1 practice telemetry, and evaluates dynamic pace deltas.
               </p>
               <div class="project-metrics-row">
                 <div class="p-metric">
-                  <span class="p-metric-val">Random Forest</span>
-                  <span class="p-metric-lbl">Temporal Weights</span>
+                  <span class="p-metric-val">66.7%</span>
+                  <span class="p-metric-lbl">Podium Accuracy (+4.8% Alpha)</span>
                 </div>
                 <div class="p-metric">
-                  <span class="p-metric-val">CI/CD</span>
-                  <span class="p-metric-lbl">Automated Ingestion</span>
+                  <span class="p-metric-val">Gemini + RSS</span>
+                  <span class="p-metric-lbl">Live Upgrade Agent</span>
                 </div>
               </div>
             </div>
             <div class="project-footer">
               <div class="project-tech-pills">
                 <span>Python</span>
+                <span>Gemini API</span>
+                <span>FastF1</span>
                 <span>Scikit-Learn</span>
-                <span>F1 Telemetry</span>
-                <span>Autonomous Scraping</span>
-                <span>CI/CD</span>
+                <span>React 19</span>
+                <span>Flask</span>
               </div>
               <div class="project-actions-row">
                 <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-paddock" aria-controls="arch-paddock">
                   <span class="arch-toggle-indicator">▸</span> ARCHITECTURE
                 </button>
+                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout Live Demo">
+                  LIVE DEMO ↗
+                </a>
                 <a href="https://github.com/mnarla/Paddock-Scout" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout on GitHub">
                   GITHUB ↗
                 </a>
@@ -274,35 +316,54 @@
             <div id="arch-paddock" class="arch-drawer" aria-hidden="true">
               <div class="arch-diagram-wrap">
                 <div class="arch-header-meta">
-                  <span>PIPELINE // TELEMETRY & WEB AGENT</span>
-                  <span class="arch-pipeline-badge">DYNAMIC CALIBRATION</span>
+                  <span>PIPELINE // TELEMETRY & GEMINI AGENT</span>
+                  <span class="arch-pipeline-badge">WALK-FORWARD BENCHMARKED</span>
                 </div>
-                <svg class="arch-diagram-svg" viewBox="0 0 520 70" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paddock Scout Architecture Diagram">
-                  <rect x="5" y="15" width="105" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="57" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">TELEMETRY INGEST</text>
-                  <text x="57" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">CI/CD Automation</text>
-
-                  <path d="M110 35 H132" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="132,32 137,35 132,38" fill="#5E212A"/>
-
-                  <rect x="137" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="194" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">DDG WEB AGENT</text>
-                  <text x="194" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Autonomous Scraper</text>
-
-                  <path d="M252 35 H274" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="274,32 279,35 274,38" fill="#5E212A"/>
-
-                  <rect x="279" y="15" width="115" height="40" fill="#18191E" stroke="#282A34" stroke-width="1"/>
-                  <text x="336" y="33" fill="#F4F4F2" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" text-anchor="middle">TEMPORAL WEIGHTS</text>
-                  <text x="336" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Dynamic Calibrator</text>
-
-                  <path d="M394 35 H416" stroke="#5E212A" stroke-width="1.5" stroke-dasharray="2 2"/>
-                  <polygon points="416,32 421,35 416,38" fill="#5E212A"/>
-
-                  <rect x="421" y="15" width="94" height="40" fill="#18191E" stroke="#10B981" stroke-width="1"/>
-                  <text x="468" y="33" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">RANDOM FOREST</text>
-                  <text x="468" y="45" fill="#8E909B" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">Race Predictions</text>
-                </svg>
+                <div class="arch-pipeline-flow">
+                  <div class="arch-node">
+                    <span class="arch-node-step">01</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">FASTF1 INGEST</span>
+                      <span class="arch-node-sub">FP1–FP3 Multi-Session Telemetry</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">02</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">GEMINI RSS AGENT</span>
+                      <span class="arch-node-sub">Live Upgrade & Aerodynamic Defect Scorer</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">03</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">TEMPORAL WEIGHTS</span>
+                      <span class="arch-node-sub">×100 2026 Era Form Calibrator</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node arch-node-terminal">
+                    <span class="arch-node-step">04</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">RANDOM FOREST</span>
+                      <span class="arch-node-sub">Calibrated Podium Probabilities</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>

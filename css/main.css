@@ -1218,6 +1218,112 @@ button {
   display: block;
 }
 
+/* Architecture Pipeline Flow (Enlarged & Legible) */
+.arch-pipeline-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 4px 0 2px;
+}
+
+.arch-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(20, 21, 26, 0.9);
+  border: 1px solid #282a34;
+  padding: 10px 14px;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.arch-node:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(26, 28, 36, 0.95);
+}
+
+.arch-node-step {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  flex-shrink: 0;
+  min-width: 18px;
+}
+
+.arch-node-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.arch-node-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #f4f4f2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arch-node-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #8e909b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Terminal Node Highlight (Emerald Active) */
+.arch-node.arch-node-terminal {
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.arch-node.arch-node-terminal .arch-node-title {
+  color: #10b981;
+}
+
+.arch-node.arch-node-terminal .arch-node-step {
+  color: #10b981;
+  opacity: 0.9;
+}
+
+/* Connector Arrow */
+.arch-connector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  position: relative;
+}
+
+.arch-connector::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #5e212a 0px,
+    #5e212a 3px,
+    transparent 3px,
+    transparent 6px
+  );
+}
+
+.arch-connector svg {
+  position: relative;
+  z-index: 1;
+}
+
 /* ==========================================================================
    TECHNICAL SKILLS MATRIX
    ========================================================================== */
