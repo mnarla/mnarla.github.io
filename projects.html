@@ -174,25 +174,25 @@
           <!-- Project 02: WFM Sell-Timing Advisor -->
           <article class="project-card" data-category="ai telemetry">
             <div class="project-card-header">
-              <div class="project-num-tag">LANGGRAPH PIPELINE</div>
+              <div class="project-num-tag">LANGGRAPH DISCORD BOT</div>
             </div>
             <div class="project-body">
               <h2 class="project-title">
                 <a href="https://github.com/mnarla/wfmarket-advisor" target="_blank" rel="noopener noreferrer" class="project-link">
-                  WFM Market Advisor <span class="card-arrow">↗</span>
+                  WFM Advisor <span class="card-arrow">↗</span>
                 </a>
               </h2>
               <p class="project-desc">
-                Multi-node LangGraph pipeline (trend, vault, patch, and synthesis nodes) ingesting live in-game market telemetry to generate deterministic SELL/HOLD trading signals with zero-redundancy SQLite conditional caching.
+                Serverless Discord bot and LangGraph market agent powered by Gemini 3.5 Flash Lite. Helps Warframe players time trades by synthesizing 90-day price trends, relic vault cycles, and patch notes. Built with a dual-path router for instant price cards or multi-tool conversational reasoning, hosted on AWS Lambda with S3-persisted SQLite caching.
               </p>
               <div class="project-metrics-row">
                 <div class="p-metric">
-                  <span class="p-metric-val">4 Nodes</span>
-                  <span class="p-metric-lbl">LangGraph Pipeline</span>
+                  <span class="p-metric-val">6 Domain Tools</span>
+                  <span class="p-metric-lbl">LangGraph Market Agent</span>
                 </div>
                 <div class="p-metric">
-                  <span class="p-metric-val">SQLite</span>
-                  <span class="p-metric-lbl">Conditional Cache</span>
+                  <span class="p-metric-val">AWS Lambda</span>
+                  <span class="p-metric-lbl">S3-Synced SQLite Cache</span>
                 </div>
               </div>
             </div>
@@ -200,13 +200,18 @@
               <div class="project-tech-pills">
                 <span>Python</span>
                 <span>LangGraph</span>
-                <span>SQLite Cache</span>
-                <span>Live Telemetry</span>
+                <span>Gemini 3.5</span>
+                <span>AWS Lambda</span>
+                <span>Discord API</span>
+                <span>SQLite + S3</span>
               </div>
               <div class="project-actions-row">
                 <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-wfm" aria-controls="arch-wfm">
                   <span class="arch-toggle-indicator">▸</span> ARCHITECTURE
                 </button>
+                <a href="https://discord.com/oauth2/authorize?client_id=1549213121791393852&scope=bot%20applications.commands&permissions=2147551232" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="Invite WFM Advisor Discord Bot">
+                  INVITE BOT ↗
+                </a>
                 <a href="https://github.com/mnarla/wfmarket-advisor" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View WFM Advisor on GitHub">
                   GITHUB ↗
                 </a>
@@ -215,15 +220,15 @@
             <div id="arch-wfm" class="arch-drawer" aria-hidden="true">
               <div class="arch-diagram-wrap">
                 <div class="arch-header-meta">
-                  <span>PIPELINE // MULTI-NODE LANGGRAPH</span>
-                  <span class="arch-pipeline-badge">CACHED INGESTION</span>
+                  <span>PIPELINE // DUAL-PATH SERVERLESS AGENT</span>
+                  <span class="arch-pipeline-badge">AWS LAMBDA & DISCORD BOT</span>
                 </div>
                 <div class="arch-pipeline-flow">
                   <div class="arch-node">
                     <span class="arch-node-step">01</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">MARKET API</span>
-                      <span class="arch-node-sub">Live In-Game Market Data</span>
+                      <span class="arch-node-title">DISCORD REST & S3 CACHE</span>
+                      <span class="arch-node-sub">Ed25519 Auth · /tmp/wfm.db S3 Hydration</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -234,8 +239,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">02</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">SQLITE CACHE</span>
-                      <span class="arch-node-sub">Zero-Redundancy Conditional Ingestion</span>
+                      <span class="arch-node-title">DUAL-PATH DISPATCHER</span>
+                      <span class="arch-node-sub">&lt;150ms Deferred ACK · Fast Card vs. Agent Route</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -246,8 +251,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">03</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">LANGGRAPH PIPELINE</span>
-                      <span class="arch-node-sub">Trend · Vault · Patch State Nodes</span>
+                      <span class="arch-node-title">LANGGRAPH & GEMINI 3.5</span>
+                      <span class="arch-node-sub">StateGraph · 6 Domain Market Tools · Trimmed Context</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -258,8 +263,8 @@
                   <div class="arch-node arch-node-terminal">
                     <span class="arch-node-step">04</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">SYNTHESIS</span>
-                      <span class="arch-node-sub">Deterministic SELL / HOLD Signal</span>
+                      <span class="arch-node-title">MARKET SYNTHESIS</span>
+                      <span class="arch-node-sub">BUY/HOLD/SELL Signals · Rich Embeds & Alerts</span>
                     </div>
                   </div>
                 </div>
