@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Chivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/main.css?v=20260914">
+  <link rel="stylesheet" href="css/main.css?v=20260918">
 </head>
 <body class="telemetry-theme">
   <!-- Custom Kinetic Cursor -->
@@ -67,67 +67,71 @@
 
           <!-- Filter Switcher -->
           <div class="project-filter-group" role="tablist" aria-label="Filter Projects">
-            <button class="filter-btn active" data-filter="all">ALL [03]</button>
+            <button class="filter-btn active" data-filter="all">ALL [04]</button>
             <button class="filter-btn" data-filter="ai">AI / AGENTS</button>
             <button class="filter-btn" data-filter="telemetry">TELEMETRY & DATA</button>
           </div>
         </div>
 
         <div class="projects-grid" id="projects-grid">
-          <!-- Project 01: Culler -->
-          <article class="project-card" data-category="ai">
+          <!-- Project 01: Paddock Scout -->
+          <article class="project-card" data-category="telemetry ai">
             <div class="project-card-header">
-              <div class="project-num-tag">LOCAL AGENT</div>
+              <div class="project-num-tag">AGENTIC AI & TELEMETRY</div>
             </div>
             <div class="project-body">
               <h2 class="project-title">
-                <a href="https://github.com/mnarla/culler" target="_blank" rel="noopener noreferrer" class="project-link">
-                  Culler <span class="card-arrow">↗</span>
+                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                  Paddock Scout <span class="card-arrow">↗</span>
                 </a>
               </h2>
               <p class="project-desc">
-                Local agentic curation engine powered by Qwen3 8B. Ingests playlist telemetry exported via Exportify and Last.fm to predict track skips, featuring an automated self-calibration loop with error-based clustering for continuous rule refinement.
+                Real-time F1 race simulation and win/podium prediction dashboard. Combines a regularized Random Forest (v6 feature engine with session-aware adaptation) with an autonomous Google News RSS & Gemini agent that extracts dynamic aerodynamic pace deltas and failure awareness (porpoising, wing reversions) across all 11 teams.
               </p>
               <div class="project-metrics-row">
                 <div class="p-metric">
-                  <span class="p-metric-val">Qwen3 8B</span>
-                  <span class="p-metric-lbl">Local LLM</span>
+                  <span class="p-metric-val">66.7%</span>
+                  <span class="p-metric-lbl">Podium Accuracy (+4.8% Alpha)</span>
                 </div>
                 <div class="p-metric">
-                  <span class="p-metric-val">CoT</span>
-                  <span class="p-metric-lbl">Grounded Reasoning</span>
+                  <span class="p-metric-val">0.0812</span>
+                  <span class="p-metric-lbl">Calibrated Brier Score</span>
                 </div>
               </div>
             </div>
             <div class="project-footer">
               <div class="project-tech-pills">
                 <span>Python</span>
-                <span>Qwen3 8B</span>
-                <span>SQLite</span>
-                <span>Exportify</span>
-                <span>Last.fm</span>
+                <span>Random Forest</span>
+                <span>Gemini API</span>
+                <span>Google News RSS</span>
+                <span>React 19</span>
+                <span>Flask</span>
               </div>
               <div class="project-actions-row">
-                <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-culler" aria-controls="arch-culler">
+                <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-paddock" aria-controls="arch-paddock">
                   <span class="arch-toggle-indicator">▸</span> ARCHITECTURE
                 </button>
-                <a href="https://github.com/mnarla/culler" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Culler on GitHub">
+                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout Live Demo">
+                  LIVE DEMO ↗
+                </a>
+                <a href="https://github.com/mnarla/Paddock-Scout" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout on GitHub">
                   GITHUB ↗
                 </a>
               </div>
             </div>
-            <div id="arch-culler" class="arch-drawer" aria-hidden="true">
+            <div id="arch-paddock" class="arch-drawer" aria-hidden="true">
               <div class="arch-diagram-wrap">
                 <div class="arch-header-meta">
-                  <span>PIPELINE // SELF-CALIBRATING AGENT</span>
-                  <span class="arch-pipeline-badge">LOCAL 8B INFERENCE</span>
+                  <span>PIPELINE // TELEMETRY & GEMINI AGENT</span>
+                  <span class="arch-pipeline-badge">WALK-FORWARD BENCHMARKED</span>
                 </div>
                 <div class="arch-pipeline-flow">
                   <div class="arch-node">
                     <span class="arch-node-step">01</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">STREAM TELEMETRY</span>
-                      <span class="arch-node-sub">Exportify & Last.fm Ingestion</span>
+                      <span class="arch-node-title">MULTI-SESSION INGEST</span>
+                      <span class="arch-node-sub">2023–2026 Data · Practice, Sprint & Quali Pace</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -138,8 +142,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">02</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">SQLITE RULE STORE</span>
-                      <span class="arch-node-sub">Audit Track History & Constraints</span>
+                      <span class="arch-node-title">GEMINI RSS AGENT</span>
+                      <span class="arch-node-sub">3-Wk Rolling Window · Dynamic Deltas & Failure Scorer</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -150,8 +154,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">03</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">QWEN3 8B (CoT)</span>
-                      <span class="arch-node-sub">Chain-of-Thought Skip Reasoning</span>
+                      <span class="arch-node-title">v6 FEATURE ENGINE</span>
+                      <span class="arch-node-sub">Session Adaptation · Overtake Index · ×100 Era Weight</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -162,8 +166,8 @@
                   <div class="arch-node arch-node-terminal">
                     <span class="arch-node-step">04</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">CALIBRATION</span>
-                      <span class="arch-node-sub">Error Cluster Feedback Loop</span>
+                      <span class="arch-node-title">RANDOM FOREST</span>
+                      <span class="arch-node-sub">Win (P1), Top-2, and Podium Probabilities</span>
                     </div>
                   </div>
                 </div>
@@ -171,7 +175,7 @@
             </div>
           </article>
 
-          <!-- Project 02: WFM Sell-Timing Advisor -->
+          <!-- Project 02: WFM Advisor -->
           <article class="project-card" data-category="ai telemetry">
             <div class="project-card-header">
               <div class="project-num-tag">LANGGRAPH DISCORD BOT</div>
@@ -272,64 +276,60 @@
             </div>
           </article>
 
-          <!-- Project 03: Paddock Scout -->
-          <article class="project-card" data-category="telemetry ai">
+          <!-- Project 03: Culler v2 -->
+          <article class="project-card" data-category="ai telemetry">
             <div class="project-card-header">
-              <div class="project-num-tag">AGENTIC AI & TELEMETRY</div>
+              <div class="project-num-tag">BROWSER EXTENSION</div>
             </div>
             <div class="project-body">
               <h2 class="project-title">
-                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
-                  Paddock Scout <span class="card-arrow">↗</span>
+                <a href="https://github.com/mnarla/culler-v2" target="_blank" rel="noopener noreferrer" class="project-link">
+                  Culler v2 <span class="card-arrow">↗</span>
                 </a>
               </h2>
               <p class="project-desc">
-                Real-time F1 race simulation and win/podium prediction dashboard. Combines a regularized Random Forest (v6 feature engine with session-aware adaptation) with an autonomous Google News RSS & Gemini agent that extracts dynamic aerodynamic pace deltas and failure awareness (porpoising, wing reversions) across all 11 teams.
+                Chrome extension (MV3) that curates Spotify playlists in real time. Passively tracks skip/keep telemetry via GraphQL stream interception, batches playlists to Gemini Flash for sub-5-second evaluation, and drives a strictly read-only review UI that scrolls users to flagged tracks instead of auto-deleting anything.
               </p>
               <div class="project-metrics-row">
                 <div class="p-metric">
-                  <span class="p-metric-val">66.7%</span>
-                  <span class="p-metric-lbl">Podium Accuracy (+4.8% Alpha)</span>
+                  <span class="p-metric-val">Gemini Flash</span>
+                  <span class="p-metric-lbl">Batched Inference</span>
                 </div>
                 <div class="p-metric">
-                  <span class="p-metric-val">0.0812</span>
-                  <span class="p-metric-lbl">Calibrated Brier Score</span>
+                  <span class="p-metric-val">GraphQL</span>
+                  <span class="p-metric-lbl">Live Stream Telemetry</span>
                 </div>
               </div>
             </div>
             <div class="project-footer">
               <div class="project-tech-pills">
-                <span>Python</span>
-                <span>Random Forest</span>
+                <span>JavaScript</span>
+                <span>Chrome MV3</span>
                 <span>Gemini API</span>
-                <span>Google News RSS</span>
-                <span>React 19</span>
-                <span>Flask</span>
+                <span>MutationObserver</span>
+                <span>chrome.storage</span>
               </div>
               <div class="project-actions-row">
-                <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-paddock" aria-controls="arch-paddock">
+                <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-culler-v2" aria-controls="arch-culler-v2">
                   <span class="arch-toggle-indicator">▸</span> ARCHITECTURE
                 </button>
-                <a href="https://paddock-scout.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout Live Demo">
-                  LIVE DEMO ↗
-                </a>
-                <a href="https://github.com/mnarla/Paddock-Scout" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Paddock Scout on GitHub">
+                <a href="https://github.com/mnarla/culler-v2" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Culler v2 on GitHub">
                   GITHUB ↗
                 </a>
               </div>
             </div>
-            <div id="arch-paddock" class="arch-drawer" aria-hidden="true">
+            <div id="arch-culler-v2" class="arch-drawer" aria-hidden="true">
               <div class="arch-diagram-wrap">
                 <div class="arch-header-meta">
-                  <span>PIPELINE // TELEMETRY & GEMINI AGENT</span>
-                  <span class="arch-pipeline-badge">WALK-FORWARD BENCHMARKED</span>
+                  <span>PIPELINE // REAL-TIME CURATION EXTENSION</span>
+                  <span class="arch-pipeline-badge">MV3 GRAPHQL &amp; GEMINI FLASH</span>
                 </div>
                 <div class="arch-pipeline-flow">
                   <div class="arch-node">
                     <span class="arch-node-step">01</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">MULTI-SESSION INGEST</span>
-                      <span class="arch-node-sub">2023–2026 Data · Practice, Sprint & Quali Pace</span>
+                      <span class="arch-node-title">GRAPHQL STREAM CAPTURE</span>
+                      <span class="arch-node-sub">Intercepts Spotify Web's Internal Queries · Ad Filtering</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -340,8 +340,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">02</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">GEMINI RSS AGENT</span>
-                      <span class="arch-node-sub">3-Wk Rolling Window · Dynamic Deltas & Failure Scorer</span>
+                      <span class="arch-node-title">PASSIVE TELEMETRY</span>
+                      <span class="arch-node-sub">Skip &lt;20% / Keep &gt;65% Playback Thresholds</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -352,8 +352,8 @@
                   <div class="arch-node">
                     <span class="arch-node-step">03</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">v6 FEATURE ENGINE</span>
-                      <span class="arch-node-sub">Session Adaptation · Overtake Index · ×100 Era Weight</span>
+                      <span class="arch-node-title">GEMINI FLASH BATCH EVAL</span>
+                      <span class="arch-node-sub">Chunked Parallel Scoring · 800+ Tracks in 3–5s</span>
                     </div>
                   </div>
                   <div class="arch-connector" aria-hidden="true">
@@ -364,8 +364,105 @@
                   <div class="arch-node arch-node-terminal">
                     <span class="arch-node-step">04</span>
                     <div class="arch-node-content">
-                      <span class="arch-node-title">RANDOM FOREST</span>
-                      <span class="arch-node-sub">Win (P1), Top-2, and Podium Probabilities</span>
+                      <span class="arch-node-title">READ-ONLY REVIEW QUEUE</span>
+                      <span class="arch-node-sub">Confidence-Tiered Flags · Scroll-to-Track UI · Zero Write Access</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04: Culler v1 -->
+          <article class="project-card" data-category="ai">
+            <div class="project-card-header">
+              <div class="project-num-tag">LOCAL AGENT · V1</div>
+            </div>
+            <div class="project-body">
+              <h2 class="project-title">
+                <a href="https://github.com/mnarla/culler" target="_blank" rel="noopener noreferrer" class="project-link">
+                  Culler <span class="card-arrow">↗</span>
+                </a>
+              </h2>
+              <p class="project-desc">
+                Local agentic curation engine powered by Qwen3 8B. Ingests playlist telemetry exported via Exportify and Last.fm to predict track skips, featuring an automated self-calibration loop with error-based clustering for continuous rule refinement.
+              </p>
+              <div class="project-metrics-row">
+                <div class="p-metric">
+                  <span class="p-metric-val">Qwen3 8B</span>
+                  <span class="p-metric-lbl">Local LLM</span>
+                </div>
+                <div class="p-metric">
+                  <span class="p-metric-val">CoT</span>
+                  <span class="p-metric-lbl">Grounded Reasoning</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-tech-pills">
+                <span>Python</span>
+                <span>Qwen3 8B</span>
+                <span>SQLite</span>
+                <span>Exportify</span>
+                <span>Last.fm</span>
+              </div>
+              <div class="project-actions-row">
+                <button class="arch-toggle-btn" aria-expanded="false" data-target="arch-culler" aria-controls="arch-culler">
+                  <span class="arch-toggle-indicator">▸</span> ARCHITECTURE
+                </button>
+                <a href="https://github.com/mnarla/culler" target="_blank" rel="noopener noreferrer" class="project-ext-btn" aria-label="View Culler on GitHub">
+                  GITHUB ↗
+                </a>
+              </div>
+            </div>
+            <div id="arch-culler" class="arch-drawer" aria-hidden="true">
+              <div class="arch-diagram-wrap">
+                <div class="arch-header-meta">
+                  <span>PIPELINE // SELF-CALIBRATING AGENT</span>
+                  <span class="arch-pipeline-badge">LOCAL 8B INFERENCE</span>
+                </div>
+                <div class="arch-pipeline-flow">
+                  <div class="arch-node">
+                    <span class="arch-node-step">01</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">STREAM TELEMETRY</span>
+                      <span class="arch-node-sub">Exportify & Last.fm Ingestion</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">02</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">SQLITE RULE STORE</span>
+                      <span class="arch-node-sub">Audit Track History & Constraints</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node">
+                    <span class="arch-node-step">03</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">QWEN3 8B (CoT)</span>
+                      <span class="arch-node-sub">Chain-of-Thought Skip Reasoning</span>
+                    </div>
+                  </div>
+                  <div class="arch-connector" aria-hidden="true">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M5 0V9M5 9L1.5 5.5M5 9L8.5 5.5" stroke="#5E212A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="arch-node arch-node-terminal">
+                    <span class="arch-node-step">04</span>
+                    <div class="arch-node-content">
+                      <span class="arch-node-title">CALIBRATION</span>
+                      <span class="arch-node-sub">Error Cluster Feedback Loop</span>
                     </div>
                   </div>
                 </div>

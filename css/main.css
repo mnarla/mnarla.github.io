@@ -985,6 +985,10 @@ button {
   gap: 24px;
 }
 
+.projects-section .projects-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
   background: rgba(24, 25, 31, 0.58);
   backdrop-filter: blur(18px) saturate(180%);
