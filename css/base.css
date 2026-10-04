@@ -28,6 +28,16 @@ body {
   min-height: 100vh;
 }
 
+#swarm-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Ambient Depth Atmosphere (visible through frosted glass cards) */
 body::before {
   content: '';

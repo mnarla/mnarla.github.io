@@ -10,8 +10,10 @@ import { initEmailCopy } from './modules/clipboard.js';
 import { initArchitectureDrawers } from './modules/architecture-drawer.js';
 import { initPageTransitions } from './modules/page-transition.js';
 import { initScrollReveal } from './modules/scroll-reveal.js';
+import { initNeuralConstellation } from './modules/neural-constellation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initNeuralConstellation();
   initPageTransitions();
   initScrollProgress();
   initProjectFilters();

@@ -134,11 +134,11 @@
 .ticker-track {
   display: inline-flex;
   gap: 32px;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   animation: ticker-slide 30s linear infinite;
 }
 
