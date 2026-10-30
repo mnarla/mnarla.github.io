@@ -269,12 +269,15 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 10px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-card);
-  font-family: var(--font-body);
+  padding: 5px 10px;
+  background: linear-gradient(135deg, rgba(72, 22, 32, 0.2), rgba(20, 21, 27, 0.76));
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(151, 58, 72, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 12px rgba(94, 33, 42, 0.16);
+  font-family: var(--font-mono);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.035em;
   font-size: var(--text-2xs);
   color: var(--text-muted);
 }
@@ -373,9 +376,14 @@ button {
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 6px 14px;
-  background: var(--accent);
+  background: linear-gradient(135deg, rgba(72, 22, 32, 0.62), rgba(20, 21, 27, 0.76));
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
   color: var(--text-inverse);
-  border: 1px solid var(--accent);
+  border: 1px solid rgba(151, 58, 72, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 20px rgba(94, 33, 42, 0.42);
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
@@ -383,8 +391,11 @@ button {
 }
 
 .hud-cta-btn:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 0 14px var(--accent-glow);
+  background: linear-gradient(135deg, rgba(94, 33, 42, 0.74), rgba(24, 26, 33, 0.86));
+  border-color: var(--text-accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 22px var(--accent-glow);
 }
 
 /* Footer HUD */
@@ -552,14 +563,23 @@ button {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, rgba(72, 22, 32, 0.62), rgba(20, 21, 27, 0.72));
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
   color: var(--text-inverse);
-  border: 1px solid var(--accent);
+  border: 1px solid rgba(151, 58, 72, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(94, 33, 42, 0.12),
+    0 0 24px rgba(94, 33, 42, 0.42);
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 0 16px var(--accent-glow);
+  background: linear-gradient(135deg, rgba(94, 33, 42, 0.74), rgba(24, 26, 33, 0.84));
+  border-color: var(--text-accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 28px var(--accent-glow);
   transform: translateY(-1px);
 }
 
@@ -712,9 +732,10 @@ button {
 }
 
 .filter-btn.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, rgba(72, 22, 32, 0.66), rgba(20, 21, 27, 0.8));
   color: var(--text-inverse);
-  border-color: var(--accent);
+  border-color: rgba(151, 58, 72, 0.72);
+  box-shadow: 0 0 20px rgba(94, 33, 42, 0.42);
 }
 
 /* ==========================================================================
@@ -815,21 +836,27 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 6px 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
-  font-family: var(--font-body);
+  padding: 7px 12px;
+  background: linear-gradient(135deg, rgba(72, 22, 32, 0.22), rgba(20, 21, 27, 0.78));
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(151, 58, 72, 0.46);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 14px rgba(94, 33, 42, 0.18);
+  font-family: var(--font-mono);
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.045em;
   font-size: var(--text-xs);
   color: var(--text-muted);
   margin-bottom: 24px;
 }
 
 .tag-accent-marker {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--text-accent);
+  background: rgba(94, 33, 42, 0.25);
+  box-shadow: 0 0 8px rgba(94, 33, 42, 0.4);
+  transform: rotate(45deg);
 }
 
 .hero-title {
@@ -852,7 +879,8 @@ button {
 
 .highlight-stroke:hover {
   color: var(--accent);
-  -webkit-text-stroke: 2px var(--accent);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
 .hero-statement {
@@ -1792,9 +1820,9 @@ button {
 }
 
 .contact-channel-card .btn-primary:hover {
-  background: var(--accent-hover);
-  border-color: rgba(180, 60, 78, 0.8);
-  box-shadow: 0 0 20px rgba(94, 33, 42, 0.55), 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(94, 33, 42, 0.74), rgba(24, 26, 33, 0.84));
+  border-color: var(--text-accent);
+  box-shadow: 0 0 28px var(--accent-glow), 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
