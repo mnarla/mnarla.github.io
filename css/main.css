@@ -872,6 +872,8 @@ button {
 }
 
 .highlight-stroke {
+  width: fit-content;
+  align-self: flex-start;
   color: transparent;
   -webkit-text-stroke: 2px var(--text-headline);
   transition: color var(--transition-fast), -webkit-text-stroke var(--transition-fast);
