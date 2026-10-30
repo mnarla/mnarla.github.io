@@ -5,7 +5,6 @@
 
 import { initScrollProgress } from './modules/scroll-progress.js';
 import { initProjectFilters } from './modules/filters.js';
-import { initCustomCursor } from './modules/cursor.js';
 import { initEmailCopy } from './modules/clipboard.js';
 import { initArchitectureDrawers } from './modules/architecture-drawer.js';
 import { initPageTransitions } from './modules/page-transition.js';
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransitions();
   initScrollProgress();
   initProjectFilters();
-  initCustomCursor();
   initEmailCopy();
   initArchitectureDrawers();
   initScrollReveal();

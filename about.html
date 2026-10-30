@@ -12,17 +12,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/main.css?v=20260904">
 </head>
 <body class="telemetry-theme">
-  <!-- Custom Kinetic Cursor -->
-  <div id="cursor-tracker" class="cursor-tracker" aria-hidden="true">
-    <span class="cursor-crosshair">•</span>
-    <span class="cursor-label"></span>
-  </div>
-
   <!-- Header HUD -->
   <header id="telemetry-hud" class="telemetry-hud">
     <div class="hud-progress-line" id="scroll-progress-line"></div>
@@ -56,14 +50,28 @@
   <main id="main-content">
     <!-- About Intro Section -->
     <section class="section hero-section">
-      <div class="container">
-        <div class="section-meta">
-          <span class="section-category">BACKGROUND</span>
+      <div class="container about-intro-grid">
+        <div class="about-intro-copy">
+          <div class="section-meta">
+            <span class="section-category">BACKGROUND</span>
+          </div>
+          <h1 class="section-title">ABOUT ME</h1>
+          <p class="hero-statement">
+            I'm a CS student at <strong>UC Santa Cruz ('28, Dean's Honors)</strong> working on <strong>neurosymbolic AI</strong> and <strong>agentic AI</strong>. I like combining formal logic with language models so software ends up grounded and verifiable instead of just probabilistic guessing dressed up as an answer.
+          </p>
         </div>
-        <h1 class="section-title">ABOUT ME</h1>
-        <p class="hero-statement" style="max-width: 800px; margin-top: 16px;">
-          I'm a CS student at <strong>UC Santa Cruz ('28, Dean's Honors)</strong> working on <strong>neurosymbolic AI</strong> and <strong>agentic AI</strong>. I like combining formal logic with language models so software ends up grounded and verifiable instead of just probabilistic guessing dressed up as an answer.
-        </p>
+
+        <figure class="about-portrait">
+          <div class="portrait-orbit" aria-hidden="true">
+            <span class="portrait-tick tick-north"></span>
+            <span class="portrait-tick tick-east"></span>
+            <span class="portrait-tick tick-south"></span>
+            <span class="portrait-tick tick-west"></span>
+          </div>
+          <div class="portrait-frame">
+            <img src="images/mayank-profile.jpg" alt="Mayank Narla smiling outdoors" width="1984" height="1488">
+          </div>
+        </figure>
       </div>
     </section>
 
